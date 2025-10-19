@@ -27,8 +27,8 @@ sns.set_palette("husl")
 # ---------------------------------------------------
 @st.cache_data
 def load_and_clean_data():
-    movies = pd.read_csv("tmdb_5000_movies.csv")
-    credits = pd.read_csv("tmdb_5000_credits.csv")
+    movies = pd.read_csv("data/tmdb_5000_movies.csv")
+    credits = pd.read_csv("data/tmdb_5000_credits.csv")
     
     # Merge datasets
     df = movies.merge(credits, left_on="id", right_on="movie_id", how="inner")
